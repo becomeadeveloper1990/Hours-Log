@@ -3,7 +3,7 @@ const ejs = require('ejs');
 const bodyParser = require('body-parser');
 
 var app = new express();
-var port = 3000 || process.ENV.PORT;
+var port = process.env.PORT || 3000;
 
 app.use(express.static(__dirname + "/public"));
 app.set("views", "views")
